@@ -37,11 +37,19 @@ The dataset consists of **997 intraoral periapical radiographs (IOPAs)** of post
 - Root canal treatment (n=381)
 - Extraction (n=143)
 
+## Image Preprocessing
 
-### Image Preprocessing
-We use advanced preprocessing techniques to enhance image quality, including:
-1. **Edge Enhancement** using a custom implementation of the **Multiple Morphology Gradient (mMG)** algorithm.
-2. **Transparency Blending** to merge enhanced and original images dynamically based on pixel intensity.
+In **VisiodentX**, image preprocessing is a vital step that ensures the quality and consistency of radiographs before feeding them into the model. Below are the key steps involved:
+
+### 1. Cropping & Grayscale Conversion
+- **Objective**: Focus on the tooth area and eliminate unnecessary background.
+- **Method**: The image is cropped based on annotated bounding box coordinates. Converting the cropped image to grayscale to reduce computational complexity and focus on intensity-based patterns.
+### 2. Edge Enhancement using Multiple Morphology Gradient (mMG) Algorithm
+- **Objective**: Enhance the edges to make boundaries of caries more distinct.
+- **Method**:  The mMG algorithm combines morphological operations with intensity scaling. The gradient threshold (T) is set dynamically based on the average pixel intensity (P) of the image.
+### 3. Alpha Transparency Blending algorithm
+- **Objective**: Blend the enhanced edge image with the original grayscale image to maintain clarity and structure.
+- **Method**:  Alpha transparency blending is used to combine the two images with a dynamic blending weight (α). The blending weight is inversely proportional to the average pixel intensity (P).
 
 
 ### Model Architecture
