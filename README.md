@@ -54,7 +54,7 @@ We use advanced preprocessing techniques to enhance image quality, including:
 - **Best Performance**: DenseNet121 combined with **Focal Loss** yielded an AUC of 0.86 in binary classification.
 - The multi-class classification results provide a promising approach to detecting and recommending treatments for dental caries.
 
-![Model Performance](path/to/your/performance/image) <!-- Add model performance graphs if available -->
+![Model Performance](assets/images/AUC-6-plots.png) <!-- Add model performance graphs if available -->
 
 ## Future Work
 We plan to deploy **VisiodentX** as a smartphone application for real-time caries detection in rural dental setups, potentially extending its capabilities to other dental diseases.
