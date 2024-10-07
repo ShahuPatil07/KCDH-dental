@@ -59,52 +59,27 @@ In **VisiodentX**, image preprocessing is a vital step that ensures the quality 
 ```python
 # Step 1: Cropping and Grayscale Conversion
 for every image in original_radiographs do
-    # Get bounding box coordinates using semantic labels
     bounding_box = get_bounding_box(semantic_labels)
-
-    # Crop the original image around these coordinates
     cropped_image = crop_image(original_image, bounding_box)
-
-    # Convert the image to grayscale
     grayscale_image = convert_to_grayscale(cropped_image)
-
-    # Return Cropped + Grayscaled image
     cropped_grayscaled_images.append(grayscale_image)
 end for
-
-# Load data: Cropped + Grayscaled images
 cropped_grayscaled_images = load_data()
 
 # Step 2: Edge Enhancement using mMG
 for every cropped_grayscaled_image in cropped_grayscaled_images do
-    # Compute average pixel brightness
     average_pixel_brightness = compute_average_brightness(cropped_grayscaled_image)
-
-    # Determine the gradient threshold using average pixel brightness
     gradient_threshold = compute_gradient_threshold(average_pixel_brightness)
-
-    # Apply enhancement mMG with the computed threshold
     enhanced_image = apply_enhancement_mMG(cropped_grayscaled_image, gradient_threshold)
-
-    # Return Enhanced image
     enhanced_images.append(enhanced_image)
 end for
-
-# Load data: Enhanced images, Cropped + Grayscaled images
 enhanced_images = load_data()
 
 # Step 3: Transparency Blending
 for every cropped_grayscaled_image in cropped_grayscaled_images do
-    # Compute average pixel brightness
     average_pixel_brightness = compute_average_brightness(cropped_grayscaled_image)
-
-    # Compute blending weight (alpha) using the average pixel brightness
     blending_weight = compute_blending_weight(average_pixel_brightness)
-
-    # Blend the enhanced image with the cropped + grayscaled image
     final_preprocessed_image = blend_images(enhanced_image, cropped_grayscaled_image, blending_weight)
-
-    # Return Final preprocessed image
     final_preprocessed_images.append(final_preprocessed_image)
 end for
 
