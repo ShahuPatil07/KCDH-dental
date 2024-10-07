@@ -2,7 +2,7 @@
 
 **A Deep Learning-based tool for automated detection and treatment recommendation for dental caries using intraoral periapical radiographs (IOPAs).**
 
-![VisiodentX](path/to/your/image) <!-- Optional: Add an image related to your project -->
+![VisiodentX](assets/images/3.png) <!-- Optional: Add an image related to your project -->
 
 ## Table of Contents
 - [Overview](#overview)
