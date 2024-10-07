@@ -2,7 +2,7 @@
 
 **A Deep Learning-based tool for automated detection and treatment recommendation for dental caries using intraoral periapical radiographs (IOPAs).**
 
-![VisiodentX](assets/images/3.png) <!-- Optional: Add an image related to your project -->
+![VisiodentX]() <!-- Optional: Add an image related to your project -->
 
 ## Table of Contents
 - [Overview](#overview)
@@ -43,9 +43,12 @@ We use advanced preprocessing techniques to enhance image quality, including:
 1. **Edge Enhancement** using a custom implementation of the **Multiple Morphology Gradient (mMG)** algorithm.
 2. **Transparency Blending** to merge enhanced and original images dynamically based on pixel intensity.
 
+
 ### Model Architecture
 1. **Baseline Model**: A custom CNN with 3 convolutional layers and ReLU activation, followed by Global Average Pooling and fully connected layers.
 2. **DenseNet121**: A pre-trained DenseNet121 model fine-tuned for multiclass classification of dental caries, achieving an AUC of 0.86 for binary classification.
+
+![ddd](assets/images/3.png)
 
 ### Results
 - **Best Performance**: DenseNet121 combined with **Focal Loss** yielded an AUC of 0.86 in binary classification.
