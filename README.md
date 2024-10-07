@@ -7,6 +7,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Dataset](#dataset)
+- [Image Preprocessing](#image-preprocessing)
 - [Model Architecture](#model-architecture)
 - [Results](#results)
 - [Future Work](#future-work)
