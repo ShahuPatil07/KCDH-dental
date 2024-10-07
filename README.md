@@ -109,7 +109,7 @@ for every cropped_grayscaled_image in cropped_grayscaled_images do
 end for
 
 # End of algorithm
-
+```
 
 
 ### Model Architecture
