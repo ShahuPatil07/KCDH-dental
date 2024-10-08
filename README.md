@@ -32,7 +32,11 @@ Our solution aims to improve the accuracy of caries detection and offer a second
 - **Scalable deployment**: Targeted for rural clinics with limited resources.
 
 ### Dataset
-The dataset consists of **997 intraoral periapical radiographs (IOPAs)** of posterior teeth, classified into four categories:
+The dataset was acquired from the Electronic Health Records
+system of a dental school in North India. The records were
+deindentified before being made available and ethical ap-
+proval was obtained to utilize these deidentified records for
+the purpose of research. The dataset consists of **997 intraoral periapical radiographs (IOPAs)** of posterior teeth, classified into four categories:
 - No cavity (n=340)
 - Caries requiring Fillings (n=242)
 - Root canal treatment (n=381)
@@ -89,8 +93,21 @@ end for
 
 
 ### Model Architecture
-1. **Baseline Model**: A custom CNN with 3 convolutional layers and ReLU activation, followed by Global Average Pooling and fully connected layers.
-2. **DenseNet121**: A pre-trained DenseNet121 model fine-tuned for multiclass classification of dental caries, achieving an AUC of 0.86 for binary classification.
+1. **Baseline Model**: he baseline model is a custom CNN (Convolutional Neural
+Network) for image classification, consisting of three convo-
+lutional layers with ReLU activation. The first layer has 32
+filters with a 3×3 kernel, followed by MaxPooling. The sec-
+ond and third layers have 64 and 128 filters, respectively, each
+followed by MaxPooling for spatial reduction. Global Aver-
+age Pooling is applied, followed by a fully connected layer
+with 1024 units for feature learning. The final classification
+layer uses softmax for predictions
+2. **DenseNet121**: DenseNet121, pretrained on ImageNet, and is fine-tuned for
+medical image classification. The DenseNet121 backbone
+serves as a feature extractor, followed by Global Average
+Pooling. A fully connected layer with 1024 units and ReLU
+activation is added, and the final layer uses softmax for multi-
+class classification.
 
 ![ddd](assets/images/3.png)
 
