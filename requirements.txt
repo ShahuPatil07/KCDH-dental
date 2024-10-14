@@ -1,0 +1,11 @@
+google-colab==1.0.0
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+Pillow==10.2.0
+tensorflow==2.16.1
+torch==1.12.1
+psutil==5.9.8
+pandas==2.2.0
+matplotlib==3.8.3
+seaborn==0.13.2
+scikit-learn== 1.4.1
