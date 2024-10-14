@@ -42,6 +42,19 @@ the purpose of research. The dataset consists of **997 intraoral periapical radi
 - Root canal treatment (n=381)
 - Extraction (n=143)
 
+## Getting Started
+
+Follow these steps to modify the original images and train the models using your own custom dataset.
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+
 ## Image Preprocessing
 
 In **VisiodentX**, image preprocessing is a vital step that ensures the quality and consistency of radiographs before feeding them into the model. Below are the key steps involved:
