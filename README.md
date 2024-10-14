@@ -61,6 +61,12 @@ Ensure that all required dependencies are installed. You can install them by run
 pip install -r requirements.txt
 ```
 
+### 3. Load custom data and Preprocesing
+After you clone the repository, create folders "images" and "labels" in the same directory where [radiograph_preprocessing.ipynb](./radiograph_preprocessing.ipynb) exists. Add images and labels for your custom data in the respective directories.
+
+### 4. Training deep learning models on preprocessed images
+If your data is binary labelled (infected/non-infected), use [binary_training.ipynb](./binary_training.ipynb) and in case of multi-class labels, leverage [multiclass_training.ipynb](./multiclass_training.ipynb). 
+
 ## Image Preprocessing
 
 In **VisiodentX**, image preprocessing is a vital step that ensures the quality and consistency of radiographs before feeding them into the model. Below are the key steps involved:
