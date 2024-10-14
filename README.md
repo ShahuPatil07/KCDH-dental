@@ -54,6 +54,12 @@ First, clone the repository to your local machine:
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
+### 2. Set Up the Environment
+Ensure that all required dependencies are installed. You can install them by running:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Image Preprocessing
 
