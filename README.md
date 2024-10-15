@@ -7,6 +7,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Dataset](#dataset)
+- [Getting Started](#getting-started)
 - [Image Preprocessing](#image-preprocessing)
 - [Model Architecture](#model-architecture)
 - [Results](#results)
@@ -51,8 +52,8 @@ Follow these steps to modify the original images and train the models using your
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/ShahuPatil07/KCDH-dental.git
+cd KCDH-dental
 ```
 ### 2. Set Up the Environment
 Ensure that all required dependencies are installed. You can install them by running:
@@ -65,7 +66,7 @@ pip install -r requirements.txt
 After you clone the repository, create folders "images" and "labels" in the same directory where [radiograph_preprocessing.ipynb](./radiograph_preprocessing.ipynb) exists. Add images and labels for your custom data in the respective directories.
 
 ### 4. Training deep learning models on preprocessed images
-If your data is binary labelled (infected/non-infected), use [binary_training.ipynb](./binary_training.ipynb) and in case of multi-class labels, leverage [multiclass_training.ipynb](./multiclass_training.ipynb). 
+If your data is binary labelled (infected/non-infected), use [binary_training.ipynb](./binary_training.ipynb) and in case of multi-class labels, leverage [multiclass_training.ipynb](./multiclass_training.ipynb). Customize your pipeline using a combinatinon of mutiple models with various loss functions provided in these notebooks. For this particular dataset, the architecture of Densenet121 performed best with Focal Loss function which address class imbalance, a major issue researchers face especiallly in medical datasets.
 
 ## Image Preprocessing
 
